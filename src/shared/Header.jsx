@@ -70,7 +70,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="py-2 border-b border-b-gray-200">
+    <header className="py-2 border-b border-b-gray-200 font-HindSiliguri">
       <Container>
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4">

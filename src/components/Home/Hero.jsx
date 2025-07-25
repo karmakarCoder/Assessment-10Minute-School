@@ -19,7 +19,7 @@ export default function Hero() {
             IELTS Course by Munzereen Shahid
           </h1>
           <div>
-            <div className="font-normal text-lg flex items-center gap-2">
+            <div className="font-normal text-lg flex items-center gap-2 font-HindSiliguri">
               <div className="text-xl text-yellow-500 flex items-center gap-1.5">
                 {[...Array(5)].map((_, index) => (
                   <FaStar key={index} />
