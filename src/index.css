@@ -20,4 +20,12 @@
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;
   }
+
+  .splide__track--nav > .splide__list > .splide__slide.is-active {
+    border: 2px dashed green !important;
+  }
+
+  .splide__slide {
+    border: 2px dashed transparent !important;
+  }
 }

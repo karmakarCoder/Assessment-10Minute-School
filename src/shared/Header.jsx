@@ -3,11 +3,14 @@ import { ChevronDown, Phone } from "lucide-react";
 import Container from "../components/common/Container";
 import logo from "../assets/Images/10mslogo-svg.svg";
 import SearchSvg from "../assets/svg/SearchSvg";
+import { getLocalStorage, setLocalStorage } from "../utils/localstorage";
+import { useLanguage } from "../context/LanguageProvider";
 
 export default function Header() {
   // all state and hooks
   const [searchQuery, setSearchQuery] = useState("");
   const [isClassDropdownOpen, setIsClassDropdownOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
   // menu item sample data
   const menuItems = [
@@ -106,7 +109,7 @@ export default function Header() {
             {/* Navigation Links */}
             <nav className="hidden lg:flex text-[15px] items-center space-x-6">
               {menuItems?.map((item, index) => (
-                <div className="relative">
+                <div key={index} className="relative">
                   <button
                     onClick={() => setIsClassDropdownOpen(!isClassDropdownOpen)}
                     className="flex items-center cursor-pointer duration-300 gap-1 text-gray-700 hover:text-green-500 font-medium"
@@ -120,7 +123,12 @@ export default function Header() {
 
             {/* Language Toggle */}
             <div className="flex items-center">
-              <span className="text-gray-700 font-medium">EN</span>
+              <span
+                className="text-gray-700 font-medium uppercase cursor-pointer"
+                onClick={() => setLanguage(language === "en" ? "bn" : "en")}
+              >
+                {language === "en" ? "BN" : "EN"}
+              </span>
             </div>
 
             {/* Phone */}

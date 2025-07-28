@@ -8,7 +8,7 @@ import {
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
 
-export default function Tagline() {
+export default function Tagline({ courseData }) {
   return (
     <div>
       <Container>
@@ -24,11 +24,17 @@ export default function Tagline() {
             slidesPerView={3}
             className="mySwiper3 border-b-2 border-b-gray-200 text-lg font-normal"
           >
-            {[...Array(10)].map((_, index) => (
-              <SwiperSlide className="py-3 text-gray-500">
-                How the course is laid out
-              </SwiperSlide>
-            ))}
+            {courseData?.sections?.map(
+              (item, index) =>
+                item?.name && (
+                  <SwiperSlide
+                    key={index}
+                    className="py-3 text-gray-500 text-center cursor-pointer duration-300 hover:text-green-700"
+                  >
+                    {item?.name}
+                  </SwiperSlide>
+                )
+            )}
           </Swiper>
 
           {/* prev icon */}
