@@ -1,8 +1,24 @@
-# React + Vite
+# 📘 10 Minute School Website – Online Interview Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a professional, frontend clone of the **10 Minute School** website (ielts-course), built as part of an **online interview assessment**.
 
-Currently, two official plugins are available:
+It simulates a dynamic learning platform with course details, instructor sections, and interactive features — optimized for performance and maintainability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🚀 Live Demo
+
+🌐 [View Live Website](https://assessment-10-minute-school.vercel.app)
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool        | Description                               |
+|-------------|-------------------------------------------|
+| **React**   | Component-based UI library                |
+| **Tailwind**| Utility-first CSS framework               |
+| **Context** | Global state management (e.g. language)   |
+| **React Query** | API data fetching & caching           |
+| **Axios**   | Promise-based HTTP client                 |
+
